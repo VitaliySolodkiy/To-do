@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="todo">
+				<div class="todo-header">
+					<input type="text" name="" id="taskDesc" placeholder="Enter you task here">
+					<button id="addTask" class="control-btn">Add</button>
+				</div>
+				<div class="todo-body">
+					<h2>ToDo List:</h2>
+					<div class="todo-control">
+						<div class="todo-control__buttons">
+							<button class="control-btn" id="clearAll">Clear List</button>
+						</div>
+						<div class="todo-control__sort">
+							<label for="sorting" class="todo-control__sort-label">Sort:</label>
+							<select name="sorting" id="sorting" class="todo-control__sort-select">
+								<option value="all">All</option>
+								<option value="done">Done</option>
+								<option value="notDone">Not Done</option>
+							</select>
+						</div>
+
+					</div>
+					<div class="todo-tasks" id="taskList">
+
+					</div>
+				</div>
+				<div class="recovery-btn">Undo deletion (<span></span>)</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+
+
+* {
+    box-sizing: border-box;
+    &:focus{
+        outline: 1px solid #333;
+    }
+    
+}
+p{
+    margin: 0;
+}
+body {
+    margin: 0;
+    background-color: #FBAB7E;
+background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+color:#4a4a4a;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+font-size: 16px;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //border: 1px solid #333;
+    min-height: 300px;
+    width: 500px;
+}
+.todo {
+    width: 100%;
+
+}
+.todo-header {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 20px;
+    input{
+        border-radius: 3px;
+        border: none;
+        font-size: inherit;
+        color: inherit;
+        padding: 7px;
+        &:focus{
+            border: 1px solid #2B6BEC;
+            outline: none;
+        }
+    }
+}
+.control-btn{
+    border-radius: 0px;
+    border: none;
+    background: #2B6BEC;
+    color: #fff;
+    justify-self: right;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    &:hover{
+        background: rgba(63, 127, 255, 0.993);
+    }
+}
+.todo-body {
+    h2{
+        text-align: center;
+    }
+    
+}
+
+.todo-tasks {
+    &__task {
+        display: flex;
+        background: #fff;
+        padding: 8px 75px 8px 5px;
+        border-radius: 3px;
+        margin: 0px 0px 10px 0px;
+        position: relative;
+        p{
+            margin-left: 10px;
+        }
+        input{
+            align-self: center;
+        }
+        .task-icon{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            //background: url(img/close.png) center / contain no-repeat;
+            &:hover{
+                cursor: pointer;
+            }
+            &.delete{
+                right: 10px;
+                width: 25px;
+                height: 25px;
+                background: url(img/close.png) center / contain no-repeat;
+                &:hover{
+                    width: 28px;
+                height: 28px;
+                }
+            }
+            &.edit{
+                right: 40px;
+                width: 23px;
+                height: 23px;
+                background: url(img/pencil.png) center / contain no-repeat;
+                &.active{
+                    background: url(img/correct.png) center / contain no-repeat;
+                }
+                &:hover{
+                    width: 26px;
+                height: 26px;
+                }
+            }
+        }
+
+    }
+    &__task-done{
+        text-decoration: line-through;
+        color: #999898;
+    }
+}
+
+.edit-task{
+    width: 100%;
+        font-size: inherit;
+        color: inherit;
+        border: none;
+        outline: none;
+        padding: 0;
+        margin-left: 10px;
+        border: 1px solid #bbb8b8;
+        &:focus{
+            border: 1px solid #2B6BEC;
+        }
+}
+
+.todo-control {
+    padding: 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //background: #fff;
+    margin: 0px 0px 10px 0px;
+    height: 25px;
+    &__buttons{
+        .control-btn{
+            padding: 5px 30px;
+        }
+    }
+    &__sort{
+        height: 100%;
+    }
+    &__sort-label{
+            margin-right: 10px;
+    }
+    &__sort-select{
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        background: #2B6BEC;
+        padding: 0px 5px;
+        height: 100%;
+            option{
+                padding: 20px;
+                background: #333;
+            }
+    }
+    &__sort-select *{
+        
+        padding: 12px 0px;
+    }
+}
+
+.recovery-btn{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background: #2b6bec40;
+    color: #fff;
+    cursor: pointer;
+}
